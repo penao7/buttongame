@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(193, 189, 230);
+  font-family: 'Lobster', cursive;
+  color: rgb(74, 63, 180);
+  font-size: 15px;
+  text-size-adjust: none;
+  text-size-adjust: auto;
+  position: static;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Space between status texts */
+
+.text {
+  padding-right: 10px;
+}
+
+/* Normal points value text */
+
+.points-value-text {
+  font-size: 50px;
+  color: rgb(83, 173, 83);
+  background-position:0 -30px;        
+}
+
+/* Points under 10 */
+
+.points-under-10 {
+  font-size: 50px;
+  color: orange
+}
+
+/* Points under 5 and pulse effect*/
+
+.points-under-5 {
+  font-size: 50px;
+  animation: pointPulse 0.8s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 1;
+}
+
+@keyframes pointPulse {
+  from {color: red;}
+  to {color: rgb(110, 0, 0);}
+}
+
+/* Wincounter CSS */
+
+.points-value-wincounter {
+  font-size: 50px;
+  color: rgb(163, 143, 32);
+}
+
+/* Increment and decrement CSS */
+
+.point-decrement {
+  font-size: 50px;
+  opacity: 0;
+  color: red;
+}
+
+.point-increment {
+  font-size: 50px;
+  opacity: 0;
+  color: green;
+}
+
+/* --- Animation for point change --- */
+
+/* slide enter */
+
+.slide-enter {
+  opacity: 0;
+  transform: scale(0.97) translateY(0px);
+  z-index: 1;
+}
+
+/* slide exit */
+
+.slide-exit {
+  opacity: 1;
+  transform: scale(1) translateX(-30px) translateY(-30px);
+}
+.slide-exit.slide-exit-active {
+  opacity: 0;
+  transform: scale(1) translateX(-30px) translateY(-80px);
+  transition: opacity 500ms linear, transform 500ms ease-out;
+}
+.slide-exit-done {
+  opacity: 0;
+}
+
+.animating {
+  position: absolute;
+}

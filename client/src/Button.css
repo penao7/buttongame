@@ -1,0 +1,55 @@
+.button {
+  border-radius: 100px;
+  background-color: rgb(193, 189, 230);
+  border: 3px solid rgb(74, 63, 180);
+  color: rgb(74, 63, 180);
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 70px;
+  font-family: 'Lobster', cursive;
+  margin: 100px;
+  animation: shake 2.5s infinite;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+/* Button focus */
+
+.button:focus {
+  outline: 0;
+
+}
+
+/* Button active effect */
+
+.button:active {
+  animation: testi 1s;
+  border: 3px solid rgb(74, 63, 180);
+}
+
+/* Button hover effect */
+
+.button:hover { 
+  background-color: rgb(74, 63, 180);
+  color: rgb(193, 189, 230);
+  animation-play-state: paused;
+
+}
+
+/* Button movement */
+
+@keyframes shake {
+  0% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  50% {
+    transform: translate3d(4px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-4px, 0, 0);
+  }
+}
+
+
