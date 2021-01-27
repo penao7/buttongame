@@ -17,7 +17,7 @@ function ButtonGame() {
   // Initialize socket, get game information from the server and set socket to the state
 
   useEffect(() => {
-    const socket = openSocket('https://morning-journey-81748.herokuapp.com/');
+    const socket = openSocket('http://localhost:5000');
     socket.on('result', handleData);
     setSocket(socket);
   }, []);
